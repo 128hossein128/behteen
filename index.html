@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>به‌تین | کاتالوگ تعاملی انجیر و خشکبار استهبان</title>
+  
+  <!-- فراخوانی برخط فونت وزیرمتن از CDN اختصاصی -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.min.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --primary: #15803d;
+      --primary-dark: #14532d;
+      --primary-light: #dcfce7;
+      --accent: #d97706;
+      --accent-light: #fef3c7;
+      --bg: #fcf9f5;
+      --card-bg: #ffffff;
+      --text-main: #1c1917;
+      --text-muted: #57534e;
+      --border: #e7e5e4;
+      --border-dark: #d6d3d1;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 12px 20px -4px rgba(20, 83, 45, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+    }
+
+    body {
+      font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 400;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 75px;
+    }
+
+    /* اعمال وزن بولد وزیرمتن روی تیترها و عناوین */
+    h1, h2, h3, h4, h5, h6, strong, b, .product-title, .hero-title, .brand-title-box h1 {
+      font-family: 'Vazirmatn', sans-serif;
+      font-weight: 700 !important;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    header.glass-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(252, 249, 245, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      object-fit: cover;
+      border: 1px solid rgba(21, 128, 61, 0.3);
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+      background: #fff;
+    }
+
+    .brand-title-box h1 {
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .brand-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 9999px;
+      background: var(--accent-light);
+      color: #78350f;
+      border: 1px solid #fde68a;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 9px 15px;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      font-family: inherit;
+    }
+
+    .btn-basket {
+      background: #fefce8;
+      color: #854d0e;
+      border: 1px solid #fde047;
+      position: relative;
+    }
+    .btn-basket:hover {
+      background: #fef08a;
+    }
+
+    .badge-count {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-section {
+      padding: 26px 0 32px 0;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 36px;
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-light);
+      border: 1px solid #86efac;
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .ping-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--primary);
+      border-radius: 50%;
+    }
+
+    .hero-title {
+      font-size: 1.55rem;
+      color: var(--text-main);
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    .hero-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 576px) {
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .feature-card {
+      background: #ffffff;
+      padding: 12px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .feature-card .feat-icon {
+      font-size: 1.25rem;
+      margin-bottom: 4px;
+    }
+
+    .feature-card .feat-sub {
+      font-size: 0.68rem;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .feature-card .feat-title {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn-phone {
+      background: var(--primary-dark);
+      color: #fff;
+    }
+    .btn-phone:hover {
+      background: #0f3d20;
+    }
+
+    .btn-eitaa {
+      background: #ea580c;
+      color: #fff;
+    }
+    .btn-eitaa:hover {
+      background: #c2410c;
+    }
+
+    .btn-bale {
+      background: #059669;
+      color: #fff;
+    }
+    .btn-bale:hover {
+      background: #047857;
+    }
+
+    .hero-banner-card {
+      background: linear-gradient(135deg, #14532d 0%, #166534 60%, #1c1917 100%);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      color: #ffffff;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .banner-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+
+    .banner-top .eng-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #fde047;
+    }
+
+    .banner-top .tag-pill {
+      background: rgba(255, 255, 255, 0.15);
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      color: #fef08a;
+    }
+
+    .hero-banner-card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 8px;
+    }
+
+    .hero-banner-card p {
+      font-size: 0.8rem;
+      color: #d1fae5;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .banner-cats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .banner-cat-box {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .banner-cat-box:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .banner-cat-box .cat-icon {
+      font-size: 1.25rem;
+    }
+
+    .banner-cat-box .cat-txt {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fef08a;
+    }
+
+    /* مشاور خرید */
+    .advisor-section {
+      margin: 16px 0 28px 0;
+    }
+
+    .advisor-card {
+      background: linear-gradient(135deg, #fefce8 0%, #ffffff 50%, #f0fdf4 100%);
+      border: 1px solid #fde68a;
+      border-radius: var(--radius-xl);
+      padding: 22px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .advisor-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .advisor-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .advisor-pill {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      width: fit-content;
+      margin-bottom: 4px;
+    }
+
+    .advisor-header h2 {
+      font-size: 1.15rem;
+      color: var(--text-main);
+    }
+
+    .btn-reset-filter {
+      display: none;
+      background: #ffe4e6;
+      color: #be123c;
+      border: 1px solid #fecdd3;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .advisor-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    @media (min-width: 576px) {
+      .advisor-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 992px) {
+      .advisor-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .advisor-btn {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      text-align: right;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      width: 100%;
+      font-family: inherit;
+    }
+    .advisor-btn:hover {
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .advisor-icon-box {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .advisor-btn .adv-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .advisor-btn .adv-sub {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    /* کاتالوگ محصولات */
+    .catalog-wrapper {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 20px 16px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    @media (min-width: 768px) {
+      .catalog-wrapper {
+        padding: 32px 28px;
+      }
+    }
+
+    .catalog-top {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 22px;
+    }
+
+    @media (min-width: 768px) {
+      .catalog-top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .catalog-top h2 {
+      font-size: 1.3rem;
+      color: var(--text-main);
+    }
+
+    .catalog-top p {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .search-box {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 10px 38px 10px 14px;
+      background: #f8fafc;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+    .search-input:focus {
+      background: #fff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.95rem;
+      color: #94a3b8;
+      pointer-events: none;
+    }
+
+    .category-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .tab-btn {
+      padding: 8px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f1f5f9;
+      color: #475569;
+      transition: all 0.2s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .tab-btn:hover {
+      background: #e2e8f0;
+    }
+    .tab-btn.active {
+      background: var(--primary-dark);
+      color: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-sm);
+    }
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: #cbd5e1;
+    }
+
+    .product-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      background: #f1f5f9;
+      overflow: hidden;
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .product-card:hover .product-img {
+      transform: scale(1.04);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 9999px;
+      border: 1px solid transparent;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .product-info {
+      padding: 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      flex-grow: 1;
+    }
+
+    .product-category-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .product-title {
+      font-size: 0.95rem;
+      color: var(--text-main);
+    }
+
+    .product-desc {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .product-flavors {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 6px;
+    }
+
+    .flavor-tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      background: #f1f5f9;
+      color: #334155;
+      padding: 2px 7px;
+      border-radius: 6px;
+    }
+
+    .product-footer {
+      background: #fafaf9;
+      padding: 10px 14px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .product-origin {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .btn-add-cart {
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 6px 11px;
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: background 0.2s;
+      font-family: inherit;
+    }
+    .btn-add-cart:hover {
+      background: var(--primary);
+    }
+
+    /* مقایسه انواع انجیر */
+    .compare-section {
+      background: #1c1917;
+      color: #ffffff;
+      padding: 36px 0;
+      margin: 36px 0;
+      border-radius: var(--radius-xl);
+    }
+
+    .compare-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 24px auto;
+      padding: 0 16px;
+    }
+
+    .compare-header .comp-tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      background: rgba(251, 191, 36, 0.2);
+      color: #fde047;
+      border: 1px solid rgba(251, 191, 36, 0.35);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-bottom: 6px;
+    }
+
+    .compare-header h3 {
+      font-size: 1.35rem;
+      margin-bottom: 4px;
+    }
+
+    .compare-header p {
+      font-size: 0.75rem;
+      color: #d6d3d1;
+    }
+
+    .compare-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 0 16px;
+    }
+
+    @media (min-width: 640px) {
+      .compare-nav {
+        grid-template-columns: repeat(5, 1fr);
+      }
+    }
+
+    .comp-btn {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #e7e5e4;
+      padding: 10px;
+      border-radius: var(--radius-md);
+      text-align: right;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+    .comp-btn:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .comp-btn.active {
+      background: #fbbf24;
+      color: #1c1917;
+      border-color: #fbbf24;
+    }
+
+    .comp-btn .c-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+
+    .comp-btn .c-sub {
+      font-size: 0.65rem;
+      opacity: 0.85;
+      margin-top: 2px;
+    }
+
+    .compare-detail-box {
+      margin: 0 16px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .compare-detail-box {
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 28px;
+      }
+    }
+
+    .comp-left .c-grade {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fde047;
+      background: rgba(251, 191, 36, 0.2);
+      padding: 3px 9px;
+      border-radius: 9999px;
+      margin-bottom: 8px;
+    }
+
+    .comp-left h4 {
+      font-size: 1.25rem;
+      margin-bottom: 6px;
+    }
+
+    .comp-left p {
+      font-size: 0.8rem;
+      color: #d6d3d1;
+      line-height: 1.7;
+    }
+
+    .comp-bars {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bar-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bar-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 9999px;
+      transition: width 0.4s ease;
+    }
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 640px) {
+      .footer-inner {
+        flex-direction: row;
+      }
+    }
+
+    /* مودال سبد استعلام */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-window {
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      max-width: 440px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 20px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      transform: translateY(15px);
+      transition: transform 0.25s ease;
+    }
+    .modal-overlay.active .modal-window {
+      transform: translateY(0);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .modal-header h4 {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-close {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: none;
+      background: #f1f5f9;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .basket-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+      max-height: 280px;
+      overflow-y: auto;
+    }
+
+    .basket-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      background: #f8fafc;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .btn-del-item {
+      color: #e11d48;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 2px 6px;
+    }
+
+    .basket-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-copy {
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .social-send-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .btn-eitaa-box {
+      background: #ffedd5;
+      color: #9a3412;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+    }
+
+    .btn-bale-box {
+      background: #dcfce7;
+      color: #14532d;
+      padding: 8px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+    }
+
+    .mobile-cart-float {
+      position: fixed;
+      bottom: 12px;
+      left: 14px;
+      right: 14px;
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 11px 18px;
+      border-radius: 9999px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 10px 25px -4px rgba(0, 0, 0, 0.35);
+      z-index: 45;
+      font-size: 0.8rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .mobile-cart-float {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- هدر سایت -->
+  <header class="glass-nav">
+    <div class="container">
+      <div class="nav-inner">
+        <div class="brand-wrap">
+          <img class="brand-logo" src="https://s6.uupload.ir/files/%D8%AA%D8%B5%D9%88%DB%8C%D8%B1_%D8%B5%D9%81%D8%AD%D9%87_2026-10-19_204142_fvhz.png" alt="لوگو به‌تین">
+          <div class="brand-title-box">
+            <h1>
+              <span>به‌تین</span>
+              <span class="brand-tag">BEH TEEN</span>
+            </h1>
+            <p class="brand-subtitle">محصولی از بهشت استهبان</p>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <button type="button" onclick="openBasketModal()" class="btn btn-basket" title="سبد استعلام">
+            <span>🛒 لیست سفارش</span>
+            <span id="basketCountBadge" class="badge-count">۰</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- هیرو -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <div>
+          <div class="hero-badge">
+            <span class="ping-dot"></span>
+            <span>مستقیم و بدون واسطه از باغستان‌های انجیر استهبان</span>
+          </div>
+
+          <h2 class="hero-title">آجیل و خشکبار به‌تین | محصولی از بهشت استهبان</h2>
+
+          <p class="hero-desc">
+            ما قصد داریم خشکبار را مستقیم و بدون واسطه از باغدار به دست مصرف‌کننده برسانیم. اگر دنبال انجیر خشک اصل استهبان و محصولات ارگانیک بر پایه انجیر با کیفیت ممتاز هستید ما اینجاییم.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <span class="feat-icon">🌱</span>
+              <span class="feat-sub">عرضه مستقیم</span>
+              <span class="feat-title">حذف واسطه‌ها</span>
+            </div>
+            <div class="feature-card">
+              <span class="feat-icon">☀️</span>
+              <span class="feat-sub">برداشت امسالی</span>
+              <span class="feat-title">باغ‌های استهبان</span>
+            </div>
+            <div class="feature-card">
+              <span class="feat-icon">🍯</span>
+              <span class="feat-sub">۱۰۰٪ طبیعی</span>
+              <span class="feat-title">بدون شکر صنعتی</span>
+            </div>
+            <div class="feature-card">
+              <span class="feat-icon">📦</span>
+              <span class="feat-sub">تنوع کامل</span>
+              <span class="feat-title">۱۸ محصول کاتالوگ</span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="tel:09171305766" class="btn btn-phone">
+              <span>📞</span>
+              <span>۰۹۱۷۱۳۰۵۷۶۶</span>
+            </a>
+            <a href="https://eitaa.com/behteen" target="_blank" rel="noopener noreferrer" class="btn btn-eitaa">
+              <span>✈️</span>
+              <span>کانال ما در ایتا</span>
+            </a>
+            <a href="https://ble.ir/behteen" target="_blank" rel="noopener noreferrer" class="btn btn-bale">
+              <span>💬</span>
+              <span>کانال ما در بله</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="hero-banner-card">
+            <div class="banner-top">
+              <span class="eng-tag">ESTAHBAN FIGS</span>
+              <span class="tag-pill">۴ دسته‌بندی اصلی</span>
+            </div>
+            <h3>ویترین خشکبار به‌تین</h3>
+            <p>دسته‌بندی جامع انواع انجیر خشک، فرآورده‌های طبیعی شیره و مسقطی، و مغزهای تازه ایرانی دست‌چین باغدار.</p>
+            <div class="banner-cats-grid">
+              <div class="banner-cat-box" onclick="filterCategory('figs')">
+                <span class="cat-icon">🌰</span>
+                <span class="cat-txt">انجیر خشک استهبان</span>
+              </div>
+              <div class="banner-cat-box" onclick="filterCategory('derivatives')">
+                <span class="cat-icon">🍬</span>
+                <span class="cat-txt">فرآورده‌های انجیر</span>
+              </div>
+              <div class="banner-cat-box" onclick="filterCategory('syrups')">
+                <span class="cat-icon">🍯</span>
+                <span class="cat-txt">شیره‌های طبیعی</span>
+              </div>
+              <div class="banner-cat-box" onclick="filterCategory('nuts')">
+                <span class="cat-icon">🥜</span>
+                <span class="cat-txt">آجیل و خشکبار</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- مشاور هوشمند خرید -->
+  <section class="advisor-section">
+    <div class="container">
+      <div class="advisor-card">
+        <div class="advisor-header">
+          <div>
+            <span class="advisor-pill">مشاور هوشمند خرید</span>
+            <h2>محصول مناسب نیاز شما کدام است؟</h2>
+          </div>
+          <button type="button" onclick="resetAllFilters()" id="resetFilterBtn" class="btn-reset-filter">
+            نمایش مجدد همه محصولات ✕
+          </button>
+        </div>
+
+        <div class="advisor-grid">
+          <button type="button" onclick="filterGoal('luxury')" class="advisor-btn">
+            <div class="advisor-icon-box" style="background:#fef3c7; color:#92400e;">👑</div>
+            <div>
+              <div class="adv-title">پذیرایی مجلسی و لوکس</div>
+              <p class="adv-sub">انجیر دهان‌باز، روشن، بادام هندی و مسقطی</p>
+            </div>
+          </button>
+
+          <button type="button" onclick="filterGoal('energy')" class="advisor-btn">
+            <div class="advisor-icon-box" style="background:#fee2e2; color:#991b1b;">⚡</div>
+            <div>
+              <div class="adv-title">خون‌ساز و بمب انرژی</div>
+              <p class="adv-sub">پنج‌شیره، چهارشیره و تینجد کنجدی</p>
+            </div>
+          </button>
+
+          <button type="button" onclick="filterGoal('diet')" class="advisor-btn">
+            <div class="advisor-icon-box" style="background:#dcfce7; color:#166534;">🍏</div>
+            <div>
+              <div class="adv-title">رژیمی و قند طبیعی</div>
+              <p class="adv-sub">گز انجیر بدون شکر، انجیربار و بادام خام</p>
+            </div>
+          </button>
+
+          <button type="button" onclick="filterGoal('daily')" class="advisor-btn">
+            <div class="advisor-icon-box" style="background:#f3e8ff; color:#6b21a8;">☕</div>
+            <div>
+              <div class="adv-title">مصرف اقتصادی خانواده</div>
+              <p class="adv-sub">انجیر گنجشک‌خورده، لاکی و بادام سنگی</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- کاتالوگ محصولات با ساختار ۱۰۰٪ استاتیک و فوری[cite: 4] -->
+  <section id="catalogSection">
+    <div class="container">
+      <div class="catalog-wrapper">
+        
+        <div class="catalog-top">
+          <div>
+            <h2>کاتالوگ فرآورده‌ها و محصولات به‌تین</h2>
+            <p>جهت استعلام موجودی یا قیمت، محصولات را به لیست سفارش خود بیافزایید.</p>
+          </div>
+
+          <div class="search-box">
+            <input 
+              type="text" 
+              id="productSearchInput" 
+              oninput="filterSearch(this.value)" 
+              placeholder="جستجوی محصول یا طعم (مثلاً پسته، شیره...)" 
+              class="search-input"
+            >
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <!-- تب‌های دسته‌بندی -->
+        <div id="categoryTabsBar" class="category-tabs">
+          <button type="button" onclick="filterCategory('all')" class="tab-btn active" id="tab-all">همه محصولات (۱۸)</button>
+          <button type="button" onclick="filterCategory('figs')" class="tab-btn" id="tab-figs"><span>🌰</span> انجیر خشک استهبان (۵)</button>
+          <button type="button" onclick="filterCategory('derivatives')" class="tab-btn" id="tab-derivatives"><span>🍬</span> فرآورده‌های انجیر (۵)</button>
+          <button type="button" onclick="filterCategory('syrups')" class="tab-btn" id="tab-syrups"><span>🍯</span> شیره‌های طبیعی (۳)</button>
+          <button type="button" onclick="filterCategory('nuts')" class="tab-btn" id="tab-nuts"><span>🥜</span> آجیل و خشکبار (۵)</button>
+        </div>
+
+        <!-- گرید کارت‌های محصولات[cite: 4] -->
+        <div id="productsCardsGrid" class="products-grid">
+
+          <div class="product-card" data-category="figs" data-goals="luxury" data-title="انجیر دهان‌باز استهبان" data-desc="انجیر خندان و تمام دهان‌باز با دانه‌های درشت و رنگ روشن، گلچین‌شده از بهترین باغات استهبان برای پذیرایی ویژه.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/باز_دهان_b6mz.jpg" alt="انجیر دهان‌باز استهبان" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef3c7; color:#78350f; border-color:#fde68a;">مجلسی و صادراتی</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">انجیر خشک</span>
+                <h3 class="product-title">انجیر دهان‌باز استهبان</h3>
+                <p class="product-desc">انجیر خندان و تمام دهان‌باز با دانه‌های درشت و رنگ روشن، گلچین‌شده از بهترین باغات استهبان برای پذیرایی ویژه.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">بسته‌بندی سفارشی</span><span class="flavor-tag">درجه یک دست‌چین</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر دهان‌باز استهبان')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="figs" data-goals="luxury daily" data-title="انجیر درشت و رنگ روشن" data-desc="انجیر خشک درشت با رنگ زرد و روشن طبیعی، بسیار خوش‌ظاهر، گوشتی و سرشار از کلسیم و فیبر.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/روشن_درست_ubtn.jpg" alt="انجیر درشت و رنگ روشن" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef9c3; color:#713f12; border-color:#fde047;">درشت و سفید</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">انجیر خشک</span>
+                <h3 class="product-title">انجیر درشت و رنگ روشن</h3>
+                <p class="product-desc">انجیر خشک درشت با رنگ زرد و روشن طبیعی، بسیار خوش‌ظاهر، گوشتی و سرشار از کلسیم و فیبر.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">سایز درشت</span><span class="flavor-tag">رنگ روشن طبیعی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر درشت و رنگ روشن')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="figs" data-goals="daily energy" data-title="انجیر درهم و شکلاتی" data-desc="انجیر خشک با رنگ عسلی و شکلاتی طبیعی و سایز درهم؛ سرشار از شیره طبیعی انجیر و فوق‌العاده مقوی برای مصرف روزانه خانواده.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/شگلاتی_bzi2.jpg" alt="انجیر درهم و شکلاتی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ffedd5; color:#7c2d12; border-color:#fdba74;">پرطرفدار و به‌صرفه</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">انجیر خشک</span>
+                <h3 class="product-title">انجیر درهم و شکلاتی</h3>
+                <p class="product-desc">انجیر خشک با رنگ عسلی و شکلاتی طبیعی و سایز درهم؛ سرشار از شیره طبیعی انجیر و فوق‌العاده مقوی برای مصرف روزانه خانواده.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">بار تازه امسالی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر درهم و شکلاتی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="figs" data-goals="daily energy" data-title="انجیر تیره و لاکی" data-desc="انجیر خشک با پوست تیره و لاکی‌رنگ که به دلیل غلظت بالای شیره درونی، طعم بسیار لذیذ و خواص خون‌سازی فراوانی دارد.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/لاکی_qqik.jpg" alt="انجیر تیره و لاکی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#e7e5e4; color:#292524; border-color:#d6d3d1;">طبیعی و پرشیره</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">انجیر خشک</span>
+                <h3 class="product-title">انجیر تیره و لاکی</h3>
+                <p class="product-desc">انجیر خشک با پوست تیره و لاکی‌رنگ که به دلیل غلظت بالای شیره درونی، طعم بسیار لذیذ و خواص خون‌سازی فراوانی دارد.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">طبیعی و سنتی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر تیره و لاکی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="figs" data-goals="daily diet" data-title="انجیر گنجشک‌خورده" data-desc="پرندگان باغ همیشه شیرین‌ترین و رسیده‌ترین انجیرهای روی درخت را نوک می‌زنند! انجیر گنجشک‌خورده استهبان اصیل‌ترین و شیرین‌ترین انتخاب برای مصرف خانگی است.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/پنجشک_z3ts.jpg" alt="انجیر گنجشک‌خورده" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#dcfce7; color:#14532d; border-color:#86efac;">شیرین‌ترین انجیر باغ!</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">انجیر خشک</span>
+                <h3 class="product-title">انجیر گنجشک‌خورده</h3>
+                <p class="product-desc">پرندگان باغ همیشه شیرین‌ترین و رسیده‌ترین انجیرهای روی درخت را نوک می‌زنند! انجیر گنجشک‌خورده استهبان اصیل‌ترین و شیرین‌ترین انتخاب برای مصرف خانگی است.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">طبیعی روی درخت خشک‌شده</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر گنجشک‌خورده')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="derivatives" data-goals="luxury energy" data-title="مسقطی انجیر (در ۵ طعم)" data-desc="مسقطی نرم و کشسان تهیه‌شده از عصاره و شیره انجیر استهبان در ۵ طعم متنوع برای پذیرایی همراه با چای و دمنوش.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/مسقطی_انجیر_kbbx.jpg" alt="مسقطی انجیر (در ۵ طعم)" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ffe4e6; color:#881337; border-color:#fecdd3;">۵ طعم سنتی و جذاب</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">مسقطی انجیر (در ۵ طعم)</h3>
+                <p class="product-desc">مسقطی نرم و کشسان تهیه‌شده از عصاره و شیره انجیر استهبان در ۵ طعم متنوع برای پذیرایی همراه با چای و دمنوش.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">زرشک</span><span class="flavor-tag">کنجد</span><span class="flavor-tag">نارگیل</span><span class="flavor-tag">گل محمدی</span><span class="flavor-tag">مغز بادام زمینی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('مسقطی انجیر (در ۵ طعم)')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="derivatives" data-goals="energy diet daily" data-title="تینجد (میکس انجیر و کنجد)" data-desc="ترکیب مقوی و سنتی انجیر چرخ‌شده استهبان و کنجد برشته، غنی‌شده با ۵ مغز و طعم فوق‌العاده برای کودکان و ورزشکاران.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/تینجد_54ab.jpg" alt="تینجد (میکس انجیر و کنجد)" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef3c7; color:#78350f; border-color:#fde68a;">بمب انرژی در ۵ طعم</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">تینجد (میکس انجیر و کنجد)</h3>
+                <p class="product-desc">ترکیب مقوی و سنتی انجیر چرخ‌شده استهبان و کنجد برشته، غنی‌شده با ۵ مغز و طعم فوق‌العاده برای کودکان و ورزشکاران.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">نارگیل</span><span class="flavor-tag">گل محمدی</span><span class="flavor-tag">بادام درختی</span><span class="flavor-tag">گردو</span><span class="flavor-tag">پسته کوهی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('تینجد (میکس انجیر و کنجد)')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="derivatives" data-goals="diet energy luxury" data-title="انجیر بار (با روکش پسته)" data-desc="اسنک و شکلات انرژی‌زای طبیعی از انجیر فشرده مرغوب با روکش غنی از خلال و مغز پسته سبز؛ جایگزین عالی تنقلات مصنوعی.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/انجیر_بار_fzmq.jpg" alt="انجیر بار (با روکش پسته)" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#dcfce7; color:#14532d; border-color:#86efac;">روکش پسته</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">انجیر بار (با روکش پسته)</h3>
+                <p class="product-desc">اسنک و شکلات انرژی‌زای طبیعی از انجیر فشرده مرغوب با روکش غنی از خلال و مغز پسته سبز؛ جایگزین عالی تنقلات مصنوعی.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">روکش پسته ممتاز</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر بار (با روکش پسته)')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="derivatives" data-goals="diet luxury" data-title="گز انجیر (بدون شکر مصنوعی)" data-desc="گز فوق‌العاده سالم و رژیمی که بدون هیچ‌گونه شکر مصنوعی و با شیره انجیر، چیپس خرما و مغز بادام تهیه شده است.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/پز_انجیز_6j81.jpg" alt="گز انجیر (بدون شکر مصنوعی)" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ccfbf1; color:#134e4a; border-color:#5eead4;">بدون شکر مصنوعی</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">گز انجیر (بدون شکر مصنوعی)</h3>
+                <p class="product-desc">گز فوق‌العاده سالم و رژیمی که بدون هیچ‌گونه شکر مصنوعی و با شیره انجیر، چیپس خرما و مغز بادام تهیه شده است.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">شیره انجیر</span><span class="flavor-tag">چیپس خرما</span><span class="flavor-tag">مغز بادام</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('گز انجیر (بدون شکر مصنوعی)')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="derivatives" data-goals="energy daily" data-title="انجیر پرسی (فرآیند شده)" data-desc="بلوک‌های انجیر خشک فرآیند و پرس‌شده با ماندگاری بالا و حمل آسان، سرشار از کالری سالم برای کوهنوردی و مصرف روزانه.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/انجیر_پرسی_9p4h.jpg" alt="انجیر پرسی (فرآیند شده)" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ffedd5; color:#7c2d12; border-color:#fdba74;">خالص و فشرده</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">انجیر پرسی (فرآیند شده)</h3>
+                <p class="product-desc">بلوک‌های انجیر خشک فرآیند و پرس‌شده با ماندگاری بالا و حمل آسان، سرشار از کالری سالم برای کوهنوردی و مصرف روزانه.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">بسته‌بندی قالبی پرسی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('انجیر پرسی (فرآیند شده)')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="syrups" data-goals="energy daily" data-title="پنج شیره طبیعی" data-desc="معجون خون‌ساز و مقوی تهیه‌شده از شیره خالص انگور، انجیر، توت، خرما و سیب.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/پنج_شیره_بهتین_gz6x.jpg" alt="پنج شیره طبیعی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#f3e8ff; color:#581c87; border-color:#d8b4fe;">معجون ۵ میوه</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">پنج شیره طبیعی</h3>
+                <p class="product-desc">معجون خون‌ساز و مقوی تهیه‌شده از شیره خالص انگور، انجیر، توت، خرما و سیب.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">شیره انگور</span><span class="flavor-tag">شیره انجیر</span><span class="flavor-tag">شیره توت</span><span class="flavor-tag">شیره خرما</span><span class="flavor-tag">شیره سیب</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('پنج شیره طبیعی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="syrups" data-goals="energy daily" data-title="چهار شیره طبیعی" data-desc="تهیه‌شده از شیره انگور، انجیر، خرما و توت با طبع گرم و انرژی‌بخشی فوری برای تمام فصول سال.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/شیره_طبیعی_lf5b.jpg" alt="چهار شیره طبیعی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef3c7; color:#78350f; border-color:#fde68a;">گرم و انرژی‌بخش</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">چهار شیره طبیعی</h3>
+                <p class="product-desc">تهیه‌شده از شیره انگور، انجیر، خرما و توت با طبع گرم و انرژی‌بخشی فوری برای تمام فصول سال.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">شیره انگور</span><span class="flavor-tag">شیره انجیر</span><span class="flavor-tag">شیره خرما</span><span class="flavor-tag">شیره توت</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('چهار شیره طبیعی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="syrups" data-goals="energy diet" data-title="شیره انجیر طبیعی" data-desc="شیره خالص و غلیظ گرفته‌شده از انجیرهای شیرین استهبان؛ بسیار ملین، مقوی معده و گوارش و جایگزین فوق‌العاده قند و شکر.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/شیره_انجیر_استهبان_57l8.jpg" alt="شیره انجیر طبیعی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ffe4e6; color:#881337; border-color:#fecdd3;">عصاره خالص انجیر</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">فرآورده‌های انجیر و شیره</span>
+                <h3 class="product-title">شیره انجیر طبیعی</h3>
+                <p class="product-desc">شیره خالص و غلیظ گرفته‌شده از انجیرهای شیرین استهبان؛ بسیار ملین، مقوی معده و گوارش و جایگزین فوق‌العاده قند و شکر.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">۱۰۰٪ عصاره خالص انجیر استهبان</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('شیره انجیر طبیعی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="nuts" data-goals="diet luxury energy" data-title="مغز بادام درختی خام" data-desc="مغز بادام درختی ایرانی خام، درشت و ۱۰۰٪ شیرین؛ سرشار از ویتامین E، پروتئین و کلسیم برای سلامت استخوان و پوست.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/بادام_8zql.jpg" alt="مغز بادام درختی خام" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#dcfce7; color:#14532d; border-color:#86efac;">تازه و شیرین</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">آجیل و خشکبار</span>
+                <h3 class="product-title">مغز بادام درختی خام</h3>
+                <p class="product-desc">مغز بادام درختی ایرانی خام، درشت و ۱۰۰٪ شیرین؛ سرشار از ویتامین E، پروتئین و کلسیم برای سلامت استخوان و پوست.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">خام و بدون نمک</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('مغز بادام درختی خام')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="nuts" data-goals="luxury" data-title="مغز بادام درختی شور" data-desc="مغز بادام درختی دست‌چین که به اندازه ملایم نمک‌سود و برشته شده تا طعمی فوق‌العاده ترد و لذیذ برای آجیل مهمانی داشته باشد.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/۲._مغز_بادام_درختی_شور_h857.jpg" alt="مغز بادام درختی شور" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef3c7; color:#78350f; border-color:#fde68a;">برشته و ترد</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">آجیل و خشکبار</span>
+                <h3 class="product-title">مغز بادام درختی شور</h3>
+                <p class="product-desc">مغز بادام درختی دست‌چین که به اندازه ملایم نمک‌سود و برشته شده تا طعمی فوق‌العاده ترد و لذیذ برای آجیل مهمانی داشته باشد.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">برشته نمکی ملایم</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('مغز بادام درختی شور')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="nuts" data-goals="diet luxury" data-title="مغز بادام هندی خام" data-desc="مغز بادام هندی خام با بافت نرم و طعم کره‌ای طبیعی، بدون نمک و افزودنی برای ورزشکاران و تغذیه سالم.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/۳._مغز_بادام_هندی_خام_q5qd.jpg" alt="مغز بادام هندی خام" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#f1f5f9; color:#1e293b; border-color:#cbd5e1;">درشت و کره‌ای</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">آجیل و خشکبار</span>
+                <h3 class="product-title">مغز بادام هندی خام</h3>
+                <p class="product-desc">مغز بادام هندی خام با بافت نرم و طعم کره‌ای طبیعی، بدون نمک و افزودنی برای ورزشکاران و تغذیه سالم.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">خام درجه یک</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('مغز بادام هندی خام')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="nuts" data-goals="luxury" data-title="مغز بادام هندی شور" data-desc="مغز بادام هندی برشته‌شده و شور با رنگ طلایی جذاب، معطر و بسیار خوش‌خوراک برای تزیین آجیل و پذیرایی لوکس.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/هندی_شور_j0c3.jpg" alt="مغز بادام هندی شور" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#fef9c3; color:#713f12; border-color:#fde047;">زعفرانی و مجلسی</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">آجیل و خشکبار</span>
+                <h3 class="product-title">مغز بادام هندی شور</h3>
+                <p class="product-desc">مغز بادام هندی برشته‌شده و شور با رنگ طلایی جذاب، معطر و بسیار خوش‌خوراک برای تزیین آجیل و پذیرایی لوکس.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">شور و طلایی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('مغز بادام هندی شور')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="product-card" data-category="nuts" data-goals="daily" data-title="بادام سنگی" data-desc="بادام با پوست چوبی (سنگی) از باغات کوهستانی که مغز درون آن تا ماه‌ها کاملاً تازه، روغنی و معطر باقی می‌ماند.">
+            <div>
+              <div class="product-img-wrap">
+                <img src="https://s6.uupload.ir/files/۲._بادام_سنگی_h6r7.jpg" alt="بادام سنگی" class="product-img" loading="lazy">
+                <span class="product-badge" style="background:#ffedd5; color:#7c2d12; border-color:#fdba74;">ماندگاری طولانی</span>
+              </div>
+              <div class="product-info">
+                <span class="product-category-label">آجیل و خشکبار</span>
+                <h3 class="product-title">بادام سنگی</h3>
+                <p class="product-desc">بادام با پوست چوبی (سنگی) از باغات کوهستانی که مغز درون آن تا ماه‌ها کاملاً تازه، روغنی و معطر باقی می‌ماند.</p>
+                <div class="product-flavors">
+                  <span class="flavor-tag">با پوست طبیعی</span>
+                </div>
+              </div>
+            </div>
+            <div class="product-footer">
+              <span class="product-origin">محصول استهبان</span>
+              <button type="button" onclick="addToBasket('بادام سنگی')" class="btn-add-cart">
+                <span>➕</span>
+                <span>افزودن به لیست</span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- مقایسه گر انجیر -->
+  <section class="container">
+    <div class="compare-section">
+      <div class="compare-header">
+        <span class="comp-tag">راهنمای شناخت تخصصی</span>
+        <h3>مقایسه انواع انجیر خشک باغ‌های استهبان</h3>
+        <p>از دهان‌باز مجلسی تا گنجشک‌خورده؛ کدام رقم برای شما مناسب‌تر است؟</p>
+      </div>
+
+      <div class="compare-nav">
+        <button type="button" onclick="showFigCompare(0)" class="comp-btn active" id="cbtn-0">
+          <div class="c-title">انجیر دهان‌باز</div>
+          <div class="c-sub">مجلسی صادراتی (خندان)</div>
+        </button>
+        <button type="button" onclick="showFigCompare(1)" class="comp-btn" id="cbtn-1">
+          <div class="c-title">درشت و رنگ روشن</div>
+          <div class="c-sub">درجه ۱ ممتاز آفتابی</div>
+        </button>
+        <button type="button" onclick="showFigCompare(2)" class="comp-btn" id="cbtn-2">
+          <div class="c-title">درهم و شکلاتی</div>
+          <div class="c-sub">کاراملی و به‌صرفه</div>
+        </button>
+        <button type="button" onclick="showFigCompare(3)" class="comp-btn" id="cbtn-3">
+          <div class="c-title">تیره و لاکی</div>
+          <div class="c-sub">سنتی و خون‌ساز</div>
+        </button>
+        <button type="button" onclick="showFigCompare(4)" class="comp-btn" id="cbtn-4">
+          <div class="c-title">گنجشک‌خورده</div>
+          <div class="c-sub">شیرین‌ترین شهد باغ</div>
+        </button>
+      </div>
+
+      <div id="figCompareDetailsBox" class="compare-detail-box">
+        <div class="comp-left">
+          <span class="c-grade" id="compGrade">مجلسی صادراتی (خندان)</span>
+          <h4 id="compTitle">انجیر دهان‌باز استهبان</h4>
+          <p id="compNote">بهترین انتخاب برای هدیه، عید نوروز و پذیرایی شیک</p>
+        </div>
+        <div class="comp-bars">
+          <div class="bar-row">
+            <div class="bar-header">
+              <span>درصد خندان و دهان‌باز بودن:</span>
+              <span id="compOpenTxt" style="color:#fde047;">۹۸٪</span>
+            </div>
+            <div class="progress-track">
+              <div id="compOpenBar" class="progress-fill" style="width:98%; background:#fbbf24;"></div>
+            </div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-header">
+              <span>میزان شهد و شیرینی طبیعی:</span>
+              <span id="compSweetTxt" style="color:#f87171;">۹۲٪</span>
+            </div>
+            <div class="progress-track">
+              <div id="compSweetBar" class="progress-fill" style="width:92%; background:#ef4444;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- پاورقی -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div><strong>آجیل و خشکبار به‌تین (BEH TEEN)</strong> | محصولی از بهشت استهبان</div>
+        <div>شماره پشتیبانی و سفارش مستقیم: ۰۹۱۷۱۳۰۵۷۶۶</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- دکمه شناور سبد استعلام در موبایل -->
+  <div class="mobile-cart-float" onclick="openBasketModal()">
+    <span>🛒 مشاهده لیست استعلام شما</span>
+    <span id="mobileBasketBadge" style="background:#fff; color:var(--primary-dark); padding:2px 8px; border-radius:9999px; font-weight:700;">۰</span>
+  </div>
+
+  <!-- مودال سبد خرید -->
+  <div id="basketModal" class="modal-overlay" onclick="if(event.target===this) closeBasketModal()">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h4>
+          <span>🛒</span>
+          <span>لیست استعلام و سفارش شما</span>
+        </h4>
+        <button type="button" onclick="closeBasketModal()" class="btn-close">✕</button>
+      </div>
+
+      <div id="basketListItems" class="basket-list">
+        <div id="emptyBasketNotice" style="text-align:center; padding:24px 0; color:#94a3b8; font-size:0.8rem; font-weight:700;">لیست سفارش شما در حال حاضر خالی است.</div>
+      </div>
+
+      <div class="basket-actions">
+        <button type="button" onclick="copyBasketToClipboard()" class="btn-copy">
+          📋 کپی متن لیست برای ارسال به پشتیبانی
+        </button>
+        <div class="social-send-grid">
+          <a href="https://eitaa.com/soheila3541" target="_blank" rel="noopener noreferrer" class="btn-eitaa-box">ارسال در ایتا</a>
+          <a href="https://ble.ir/soheila3541" target="_blank" rel="noopener noreferrer" class="btn-bale-box">ارسال در بله</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // اطلاعات مقایسه ارقام ۵ گانه
+    const figComparisons = [
+      { name: 'انجیر دهان‌باز', grade: 'مجلسی صادراتی (خندان)', openPct: 98, sweetPct: 92, note: 'بهترین انتخاب برای هدیه، عید نوروز و پذیرایی شیک' },
+      { name: 'درشت و رنگ روشن', grade: 'درجه ۱ ممتاز آفتابی', openPct: 60, sweetPct: 90, note: 'بسیار گوشتی، درشت و خوش‌رنگ بدون گوگرد' },
+      { name: 'درهم و شکلاتی', grade: 'کاراملی و به‌صرفه', openPct: 45, sweetPct: 95, note: 'پرشهد، نرم و عالی برای مصرف روزانه خانواده' },
+      { name: 'تیره و لاکی', grade: 'سنتی و خون‌ساز', openPct: 25, sweetPct: 96, note: 'تراکم بالای املاح و شیره غلیظ درونی' },
+      { name: 'گنجشک‌خورده', grade: 'شیرین‌ترین شهد باغ', openPct: 85, sweetPct: 100, note: 'دست‌چین طبیعی پرندگان باغ به دلیل حداکثر شیرینی' }
+    ];
+
+    function showFigCompare(idx) {
+      for (let i = 0; i < 5; i++) {
+        const btn = document.getElementById('cbtn-' + i);
+        if (btn) btn.classList.toggle('active', i === idx);
+      }
+      const item = figComparisons[idx];
+      document.getElementById('compGrade').innerText = item.grade;
+      document.getElementById('compTitle').innerText = item.name + ' استهبان';
+      document.getElementById('compNote').innerText = item.note;
+      document.getElementById('compOpenTxt').innerText = item.openPct + '٪';
+      document.getElementById('compOpenBar').style.width = item.openPct + '%';
+      document.getElementById('compSweetTxt').innerText = item.sweetPct + '٪';
+      document.getElementById('compSweetBar').style.width = item.sweetPct + '%';
+    }
+
+    // فیلترها روی تگ‌های استاتیک HTML
+    let currentCategory = 'all';
+    let currentGoal = null;
+    let currentSearch = '';
+
+    function applyCardFilters() {
+      const cards = document.querySelectorAll('.product-card');
+      const q = currentSearch.trim().toLowerCase();
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const goals = card.getAttribute('data-goals') || '';
+        const title = (card.getAttribute('data-title') || '').toLowerCase();
+        const desc = (card.getAttribute('data-desc') || '').toLowerCase();
+
+        const matchCat = (currentCategory === 'all' || cat === currentCategory);
+        const matchGoal = (!currentGoal || goals.includes(currentGoal));
+        const matchSearch = (!q || title.includes(q) || desc.includes(q));
+
+        if (matchCat && matchGoal && matchSearch) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function filterCategory(cat) {
+      currentCategory = cat;
+      const tabIds = ['all', 'figs', 'derivatives', 'syrups', 'nuts'];
+      tabIds.forEach(id => {
+        const el = document.getElementById('tab-' + id);
+        if (el) el.classList.toggle('active', id === cat);
+      });
+      applyCardFilters();
+      const sec = document.getElementById('catalogSection');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function filterGoal(goal) {
+      currentGoal = goal;
+      document.getElementById('resetFilterBtn').style.display = 'inline-block';
+      applyCardFilters();
+      const sec = document.getElementById('catalogSection');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function filterSearch(val) {
+      currentSearch = val;
+      applyCardFilters();
+    }
+
+    function resetAllFilters() {
+      currentCategory = 'all';
+      currentGoal = null;
+      currentSearch = '';
+      document.getElementById('productSearchInput').value = '';
+      document.getElementById('resetFilterBtn').style.display = 'none';
+      filterCategory('all');
+    }
+
+    // مدیریت سبد استعلام
+    let basket = [];
+
+    function addToBasket(title) {
+      basket.push(title);
+      updateBasketBadges();
+      alert('«' + title + '» به لیست سفارش اضافه شد.');
+    }
+
+    function updateBasketBadges() {
+      document.getElementById('basketCountBadge').innerText = basket.length;
+      document.getElementById('mobileBasketBadge').innerText = basket.length;
+    }
+
+    function openBasketModal() {
+      const container = document.getElementById('basketListItems');
+      if (basket.length === 0) {
+        container.innerHTML = '<div style="text-align:center; padding:24px 0; color:#94a3b8; font-size:0.8rem; font-weight:700;">لیست سفارش شما در حال حاضر خالی است.</div>';
+      } else {
+        container.innerHTML = basket.map((item, idx) => `
+          <div class="basket-item">
+            <span>${item}</span>
+            <button type="button" onclick="removeFromBasket(${idx})" class="btn-del-item">✕</button>
+          </div>
+        `).join('');
+      }
+      document.getElementById('basketModal').classList.add('active');
+    }
+
+    function removeFromBasket(idx) {
+      basket.splice(idx, 1);
+      updateBasketBadges();
+      openBasketModal();
+    }
+
+    function closeBasketModal() {
+      document.getElementById('basketModal').classList.remove('active');
+    }
+
+    function copyBasketToClipboard() {
+      if (basket.length === 0) {
+        alert('لیست سفارش خالی است.');
+        return;
+      }
+      const text = 'سلام، استعلام کاتالوگ خشکبار به‌تین:\n' + basket.map((b, i) => (i + 1) + '. ' + b).join('\n');
+      navigator.clipboard.writeText(text);
+      alert('متن لیست استعلام کپی شد! می‌توانید در ایتا یا بله پیست کنید.');
+    }
+  </script>
+</body>
+</html>
